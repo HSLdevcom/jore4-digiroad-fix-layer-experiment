@@ -9,7 +9,7 @@ jore4-digiroad-fix-layer-experiment iterates on the process of creating the fixe
 1. Install QGIS.
 1. If you are not using `git`, download and unzip a [copy of this repository](https://github.com/HSLdevcom/jore4-digiroad-fix-layer-experiment/archive/refs/heads/main.zip).
 1. Open `jore4-digiroad-fix-project.qgz`.
-1. Create new linestrings with attributes in the layer `jore4-digiroad-fix-layer`.
+1. Create new linestrings with attributes in the layer `jore4-digiroad-fix-layer`. Please use snapping. When drawing, start and/or end your linestrings from an existing Digiroad point (junction or end of road).
 1. Upload the new `jore4-digiroad-fix-layer.gpkg` into [`fixes/`](./fixes).
 
 ## Attributes of new links
@@ -21,6 +21,8 @@ Eventually the new links need these attributes:
 - direction of travel (`AJOSUUNTA` in Digiroad)
 - valid vehicle types for each link
 - level of link (`SILTA_ALIK` in Digiroad)
+
+Attributes are documented on the newest Digiroad-julkaisu [Tietolajien kuvaus](https://vayla.fi/vaylista/aineistot/digiroad/aineisto/aineistojulkaisut).
 
 The links will have a Z coordinate.
 It makes sense for the Z coordinate to not conflict with the level of the link when compared to the Z coordinates of the surrounding links.
